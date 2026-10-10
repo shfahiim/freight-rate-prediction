@@ -1,0 +1,83 @@
+# A single submission: new root files stay local until explicitly allowed.
+/*
+!/.gitignore
+!/.gitattributes
+!/README.md
+!/requirements.txt
+!/pyproject.toml
+!/validation_predictions.csv
+
+# Production code and contract tests.
+!/src/
+/src/*
+!/src/freight_rate/
+/src/freight_rate/*
+!/src/freight_rate/__init__.py
+!/src/freight_rate/audit.py
+!/src/freight_rate/common.py
+!/src/freight_rate/eda.py
+!/src/freight_rate/evaluate.py
+!/src/freight_rate/features.py
+!/src/freight_rate/forecasting.py
+!/src/freight_rate/modeling.py
+!/src/freight_rate/predict.py
+!/src/freight_rate/train.py
+!/tests/
+/tests/*
+!/tests/test_*.py
+
+# Include all supplied assessment inputs once, ready for clone-and-run.
+!/assessment/
+/assessment/*
+!/assessment/score.py
+!/assessment/freight-rate-ml-assessment.pdf
+!/assessment/original-readme.md
+!/assessment/requirements.txt
+!/data/
+/data/*
+!/data/README.md
+!/data/train_test.csv
+!/data/validation.csv
+!/data/validation_predictions_template.csv
+!/data/december_chart_inputs.csv
+
+# Final predictions only.
+!/outputs/
+/outputs/*
+!/outputs/december_predictions.csv
+
+# Saved evaluation and recipe metadata required for reproduction.
+!/evaluation/
+/evaluation/*
+!/evaluation/data_audit.json
+!/evaluation/protocol.json
+!/evaluation/selected_recipe.json
+!/evaluation/final_audit.json
+
+# Report PDF and selected assets only.
+!/reports/
+/reports/*
+!/reports/report.pdf
+!/reports/assets/
+/reports/assets/*
+!/reports/assets/candidate_december.png
+!/reports/assets/quote_relationship.png
+!/reports/assets/forecast_ablation.png
+!/reports/assets/distance_price.png
+!/reports/assets/city_novelty.png
+!/reports/assets/feature_distributions.png
+!/reports/assets/price_distributions.png
+
+# Also exclude caches, credentials, and editor files inside allowed directories.
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.env
+.env.*
+.DS_Store
+*.swp
+
+# Ignore rules do not untrack files already in the Git index.

@@ -1,0 +1,222 @@
+{
+  "candidates": [
+    {
+      "algorithm": "equipment_median",
+      "contract": "full",
+      "include_quote": false,
+      "name": "full_equipment_median",
+      "positive_floor": 1.0
+    },
+    {
+      "algorithm": "catboost",
+      "contract": "full",
+      "include_quote": false,
+      "iterations": 581,
+      "loss": "MAE",
+      "name": "full_catboost_baseline",
+      "positive_floor": 1.0
+    },
+    {
+      "algorithm": "catboost",
+      "calendar": true,
+      "contract": "full",
+      "include_quote": false,
+      "iterations": 600,
+      "loss": "MAE",
+      "name": "full_calendar_catboost",
+      "positive_floor": 1.0,
+      "reference": "full_catboost_baseline"
+    },
+    {
+      "algorithm": "forecaster",
+      "calendar": true,
+      "contract": "full",
+      "include_quarter": false,
+      "include_quote": false,
+      "include_trend": true,
+      "name": "full_spline_no_quarter",
+      "positive_floor": 1.0,
+      "reference": "full_catboost_baseline",
+      "residual_trees": false
+    },
+    {
+      "algorithm": "forecaster",
+      "calendar": true,
+      "contract": "full",
+      "include_quarter": true,
+      "include_quote": false,
+      "include_trend": false,
+      "name": "full_spline_no_trend",
+      "positive_floor": 1.0,
+      "reference": "full_catboost_baseline",
+      "residual_trees": false
+    },
+    {
+      "algorithm": "forecaster",
+      "calendar": true,
+      "contract": "full",
+      "include_quarter": true,
+      "include_quote": false,
+      "include_trend": true,
+      "name": "full_spline_forecast",
+      "positive_floor": 1.0,
+      "reference": "full_catboost_baseline",
+      "residual_trees": false
+    },
+    {
+      "algorithm": "forecaster",
+      "calendar": true,
+      "contract": "full",
+      "include_quarter": true,
+      "include_quote": false,
+      "include_trend": true,
+      "name": "full_hybrid_forecast",
+      "positive_floor": 1.0,
+      "reference": "full_catboost_baseline",
+      "residual_trees": true
+    },
+    {
+      "algorithm": "equipment_median",
+      "contract": "reduced",
+      "include_quote": false,
+      "name": "reduced_equipment_median",
+      "positive_floor": 1.0
+    },
+    {
+      "algorithm": "catboost",
+      "contract": "reduced",
+      "include_quote": false,
+      "iterations": 586,
+      "loss": "MAE",
+      "name": "reduced_catboost_baseline",
+      "positive_floor": 1.0
+    },
+    {
+      "algorithm": "catboost",
+      "calendar": true,
+      "contract": "reduced",
+      "include_quote": false,
+      "iterations": 600,
+      "loss": "MAE",
+      "name": "reduced_calendar_catboost",
+      "positive_floor": 1.0,
+      "reference": "reduced_catboost_baseline"
+    },
+    {
+      "algorithm": "forecaster",
+      "calendar": true,
+      "contract": "reduced",
+      "include_quarter": false,
+      "include_quote": false,
+      "include_trend": true,
+      "name": "reduced_spline_no_quarter",
+      "positive_floor": 1.0,
+      "reference": "reduced_catboost_baseline",
+      "residual_trees": false
+    },
+    {
+      "algorithm": "forecaster",
+      "calendar": true,
+      "contract": "reduced",
+      "include_quarter": true,
+      "include_quote": false,
+      "include_trend": false,
+      "name": "reduced_spline_no_trend",
+      "positive_floor": 1.0,
+      "reference": "reduced_catboost_baseline",
+      "residual_trees": false
+    },
+    {
+      "algorithm": "forecaster",
+      "calendar": true,
+      "contract": "reduced",
+      "include_quarter": true,
+      "include_quote": false,
+      "include_trend": true,
+      "name": "reduced_spline_forecast",
+      "positive_floor": 1.0,
+      "reference": "reduced_catboost_baseline",
+      "residual_trees": false
+    },
+    {
+      "algorithm": "forecaster",
+      "calendar": true,
+      "contract": "reduced",
+      "include_quarter": true,
+      "include_quote": false,
+      "include_trend": true,
+      "name": "reduced_hybrid_forecast",
+      "positive_floor": 1.0,
+      "reference": "reduced_catboost_baseline",
+      "residual_trees": true
+    }
+  ],
+  "code_checksums": {
+    "common.py": "0beb3329008628623bf4c6fab753f207728100889c57fe19ef8477d4bf0c2a34",
+    "evaluate.py": "a6f14921acc5511c2151b8ab84af75d29f58915a79257d28a9c78a1045701f4a",
+    "features.py": "41e4f6961a4f056a27675a9d19deb48b70053603f5b0bc3a41c0129bce316ac2",
+    "forecasting.py": "257e18780ba6cca2a5b630f3ab63ff37a866c8e42fc57f4218494919e3806225",
+    "modeling.py": "08984be781f3d5badd61cefa48d82a1e9ca11a873139ccecca678919acd5df14"
+  },
+  "environment": {
+    "packages": {
+      "catboost": "1.2.8",
+      "joblib": "1.6.0",
+      "matplotlib": "3.9.4",
+      "numpy": "1.26.4",
+      "pandas": "2.2.3",
+      "reportlab": "4.1.0",
+      "scikit-learn": "1.8.0",
+      "scipy": "1.17.1",
+      "threadpoolctl": "3.7.0"
+    },
+    "python": "3.12.3"
+  },
+  "folds": [
+    [
+      "A",
+      "2025-05-01",
+      "2025-07-01"
+    ],
+    [
+      "B",
+      "2025-06-01",
+      "2025-08-01"
+    ],
+    [
+      "C",
+      "2025-07-01",
+      "2025-09-01"
+    ],
+    [
+      "D",
+      "2025-08-01",
+      "2025-10-01"
+    ]
+  ],
+  "rules": {
+    "aggregation": "Average MAE across folds within each calendar month, then average May through September equally.",
+    "audit_end_exclusive": "2025-11-01",
+    "audit_train_end_exclusive": "2025-09-01",
+    "candidate_max_city_degradation": 0.1,
+    "candidate_max_macro_rmse_degradation": 0.05,
+    "candidate_max_month_degradation": 0.05,
+    "candidate_min_improvement": 0.02,
+    "catboost_fit_cap": 36,
+    "city_count": 4,
+    "city_rule": "First four training cities ordered by SHA256(city name); selected without target values.",
+    "evaluation_status": "Development backtests: September-October was reviewed during development and September overlaps selection. Final November-December labels are unavailable.",
+    "quote_max_month_degradation": 0.02,
+    "quote_min_improvement": 0.02,
+    "unified_max_city_degradation": 0.1,
+    "unified_max_macro_degradation": 0.02,
+    "unified_max_month_degradation": 0.05
+  },
+  "training_sha256": "892980fd20bac7ac0ca4ec31d3981fca48d52dec88e4f02642ab955f1efb40fe",
+  "withheld_cities": [
+    "Buffalo",
+    "Houston",
+    "Memphis",
+    "St. Louis"
+  ]
+}

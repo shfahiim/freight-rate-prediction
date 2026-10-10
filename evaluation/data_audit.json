@@ -1,0 +1,214 @@
+{
+  "checksums": {
+    "december_chart_inputs.csv": "d4a0cba969e315eae3c967268914960547dc6589568e07bf6182551bdc267e6e",
+    "train_test.csv": "892980fd20bac7ac0ca4ec31d3981fca48d52dec88e4f02642ab955f1efb40fe",
+    "validation.csv": "f6cdc7c367b397b90b319fc7ad30fd0e1893fd6a714816dda54c303b0fe71151",
+    "validation_predictions_template.csv": "79de15adabcf807b8636b9b47ebe964d451fbcb343056c44a2c4b54a219891c6"
+  },
+  "december_inputs": {
+    "columns": [
+      "pickup",
+      "delivery",
+      "distance",
+      "equipment",
+      "weight",
+      "date",
+      "predicted_rate"
+    ],
+    "duplicate_ids": null,
+    "duplicate_rows": 0,
+    "first_date": "2025-12-01",
+    "last_date": "2025-12-31",
+    "missing": {
+      "date": 0,
+      "delivery": 0,
+      "distance": 0,
+      "equipment": 0,
+      "pickup": 0,
+      "predicted_rate": 31,
+      "weight": 0
+    },
+    "monthly_rows": {
+      "2025-12": 31
+    },
+    "negative_weight": 0,
+    "rows": 31
+  },
+  "development": {
+    "columns": [
+      "load_id",
+      "pickup",
+      "delivery",
+      "pickup_lat",
+      "pickup_lon",
+      "delivery_lat",
+      "delivery_lon",
+      "distance",
+      "equipment",
+      "weight",
+      "date",
+      "market_index",
+      "quote_signal",
+      "posted_rate"
+    ],
+    "duplicate_ids": 0,
+    "duplicate_rows": 0,
+    "first_date": "2025-01-01",
+    "last_date": "2025-10-31",
+    "missing": {
+      "date": 0,
+      "delivery": 0,
+      "delivery_lat": 0,
+      "delivery_lon": 0,
+      "distance": 0,
+      "equipment": 0,
+      "load_id": 0,
+      "market_index": 374,
+      "pickup": 0,
+      "pickup_lat": 0,
+      "pickup_lon": 0,
+      "posted_rate": 0,
+      "quote_signal": 0,
+      "weight": 300
+    },
+    "monthly_rows": {
+      "2025-01": 4918,
+      "2025-02": 4337,
+      "2025-03": 5036,
+      "2025-04": 4819,
+      "2025-05": 4913,
+      "2025-06": 4783,
+      "2025-07": 4912,
+      "2025-08": 4759,
+      "2025-09": 4670,
+      "2025-10": 4853
+    },
+    "negative_weight": 292,
+    "rows": 48000
+  },
+  "final_inputs": {
+    "columns": [
+      "load_id",
+      "pickup",
+      "delivery",
+      "pickup_lat",
+      "pickup_lon",
+      "delivery_lat",
+      "delivery_lon",
+      "distance",
+      "equipment",
+      "weight",
+      "date",
+      "market_index",
+      "quote_signal"
+    ],
+    "duplicate_ids": 0,
+    "duplicate_rows": 0,
+    "first_date": "2025-11-01",
+    "last_date": "2025-12-31",
+    "missing": {
+      "date": 0,
+      "delivery": 0,
+      "delivery_lat": 0,
+      "delivery_lon": 0,
+      "distance": 0,
+      "equipment": 0,
+      "load_id": 0,
+      "market_index": 249,
+      "pickup": 0,
+      "pickup_lat": 0,
+      "pickup_lon": 0,
+      "quote_signal": 0,
+      "weight": 165
+    },
+    "monthly_rows": {
+      "2025-11": 5836,
+      "2025-12": 6164
+    },
+    "negative_weight": 145,
+    "rows": 12000
+  },
+  "note": "Descriptive inspection includes September/October. These are not model validation results; final inputs are not used for fitting or selection.",
+  "novelty": {
+    "new_cities": [
+      "Allentown",
+      "Charlotte",
+      "Chicago",
+      "Jackson",
+      "Knoxville",
+      "Laredo",
+      "Norfolk",
+      "San Diego"
+    ],
+    "training_city_count": 64,
+    "unseen_city_rows": 1447,
+    "unseen_route_known_city_rows": 14,
+    "unseen_route_rows": 1461
+  },
+  "quote_months": [
+    {
+      "median_relative_discrepancy_pct": 0.7221930396446733,
+      "month": "2025-01",
+      "rows": 4918,
+      "spearman_quote_rate_per_mile": 0.9625090917986934
+    },
+    {
+      "median_relative_discrepancy_pct": 0.715341970752693,
+      "month": "2025-02",
+      "rows": 4337,
+      "spearman_quote_rate_per_mile": 0.9649753101314842
+    },
+    {
+      "median_relative_discrepancy_pct": 0.6936832116549678,
+      "month": "2025-03",
+      "rows": 5036,
+      "spearman_quote_rate_per_mile": 0.9701203547197976
+    },
+    {
+      "median_relative_discrepancy_pct": 15.433668171228895,
+      "month": "2025-04",
+      "rows": 4819,
+      "spearman_quote_rate_per_mile": -0.9633980928353878
+    },
+    {
+      "median_relative_discrepancy_pct": 16.057722959133468,
+      "month": "2025-05",
+      "rows": 4913,
+      "spearman_quote_rate_per_mile": -0.9678736031405262
+    },
+    {
+      "median_relative_discrepancy_pct": 0.6683010039010745,
+      "month": "2025-06",
+      "rows": 4783,
+      "spearman_quote_rate_per_mile": 0.9680634873962062
+    },
+    {
+      "median_relative_discrepancy_pct": 16.101962551679204,
+      "month": "2025-07",
+      "rows": 4912,
+      "spearman_quote_rate_per_mile": -0.9646275531526654
+    },
+    {
+      "median_relative_discrepancy_pct": 11.019678658403782,
+      "month": "2025-08",
+      "rows": 4759,
+      "spearman_quote_rate_per_mile": -0.022430840803301568
+    },
+    {
+      "median_relative_discrepancy_pct": 0.6963279650691233,
+      "month": "2025-09",
+      "rows": 4670,
+      "spearman_quote_rate_per_mile": 0.966525716248358
+    },
+    {
+      "median_relative_discrepancy_pct": 15.673949237689758,
+      "month": "2025-10",
+      "rows": 4853,
+      "spearman_quote_rate_per_mile": -0.9593080897496459
+    }
+  ],
+  "target": {
+    "maximum": 25533.0,
+    "minimum": 57.22
+  }
+}
