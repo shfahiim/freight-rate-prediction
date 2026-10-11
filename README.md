@@ -35,11 +35,14 @@ The unchanged supplied scorer validates both output contracts and creates the
 December chart; **it does not measure predictive accuracy**. Main predictions
 are joined to the template by ID and exported as exactly `load_id,predicted_rate`.
 
-To regenerate the data audit and EDA figures locally under `artifacts/eda/`:
+To rerun the data audit and generate the full working set of EDA outputs:
 
 ```bash
 .venv/bin/python -m freight_rate.audit
 ```
+
+The command creates `artifacts/eda/` automatically. The selected figures used
+in the report are already included in `reports/assets/`.
 
 ## Results
 
