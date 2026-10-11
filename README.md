@@ -113,7 +113,4 @@ Quarter recurrence and longer-horizon price drift remain uncertainties.
 - `tests/`: chronology, training-only preprocessing, extrapolation, unseen inputs, serialization, and output alignment.
 - `data/` and `assessment/`: original CSVs, brief, instructions, requirements, and scorer; see [input mapping](data/README.md).
 
-**Loom walkthrough:** [Watch the recorded project walkthrough](https://www.loom.com/share/209795baeed34856b5c826b1dc929883) (approximately 4 minutes).
-
-The allowlist in `.gitignore` keeps reviews, drafts, experiments, email,
-duplicate attachments, fitted models, environments, and caches local.
+**Loom walkthrough:** [Watch the recorded project walkthrough](https://www.loom.com/share/209795baeed34856b5c826b1dc929883).
